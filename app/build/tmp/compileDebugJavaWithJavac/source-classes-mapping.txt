@@ -1,15 +1,31 @@
-com/example/unorpproject/LoginForm.java
- com.example.unorpproject.LoginForm
+com/example/unorpproject/MainActivity.java
+ com.example.unorpproject.MainActivity
 com/example/unorpproject/CadastroForm.java
  com.example.unorpproject.CadastroForm
  com.example.unorpproject.CadastroForm$1
  com.example.unorpproject.CadastroForm$ValidaCPF
+com/example/unorpproject/model/User.java
+ com.example.unorpproject.model.User
+com/example/unorpproject/AreaAddItem.java
+ com.example.unorpproject.AreaAddItem
 com/example/unorpproject/BuildConfig.java
  com.example.unorpproject.BuildConfig
+com/example/unorpproject/model/Variables.java
+ com.example.unorpproject.model.Variables
+com/example/unorpproject/model/Result.java
+ com.example.unorpproject.model.Result
 com/example/unorpproject/AreaUsuario.java
  com.example.unorpproject.AreaUsuario
+com/example/unorpproject/retrofit/RequestRetrofit.java
+ com.example.unorpproject.retrofit.RequestRetrofit
+com/example/unorpproject/retrofit/SignUpService.java
+ com.example.unorpproject.retrofit.SignUpService
+com/example/unorpproject/retrofit/BaseAsyncTask.java
+ com.example.unorpproject.retrofit.BaseAsyncTask
+ com.example.unorpproject.retrofit.BaseAsyncTask$ExecutaListener
+ com.example.unorpproject.retrofit.BaseAsyncTask$FinalizadaListener
+com/example/unorpproject/LoginForm.java
+ com.example.unorpproject.LoginForm
 com/example/unorpproject/AreaLogged.java
  com.example.unorpproject.AreaLogged
  com.example.unorpproject.AreaLogged$1
-com/example/unorpproject/MainActivity.java
- com.example.unorpproject.MainActivity

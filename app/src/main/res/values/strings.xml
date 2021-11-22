@@ -34,19 +34,54 @@
     <string name="btcadastrar">Cadastrar</string>
     <string name="titulo">Voltar</string>
 
-    <!-- Tela de Área do Usuário -->
+    <!-- Tela do Perfil do Usuário -->
     <string name="imageuser">UserImage</string>
-    <string name="sair">Sair</string>
+    <string name="notfound">Not Found</string>
+    <string name="btvoltar">Voltar</string>
 
-    <string name="notfound">Not found</string>
-    <string name="perfil">Perfil</string>
-    <string name="adicionar">Adicionar</string>
+    <!-- Tela Principal do Usuário -->
+    <string name="adicionarItem">Adicionar</string>
+    <string name="removerItem">Remover</string>
+    <string name="itens">Itens</string>
+    <string name="watts">Watts</string>
+    <string name="hrs">Hrs</string>
+    <string name="qtdItem">Qtd</string>
+    <string name="gasto">Gasto</string>
 
-    <string-array name="itens_pre">
-        <item>Lâmpada 9 W</item>
-        <item>Notebook 65 W</item>
-        <item>Chuveiro 4800 W</item>
-        <item>Microondas 1000 W</item>
-    </string-array>
+    <!-- Opções barra de ferramentas -->
+    <string name="perfilUsuario">Perfil do Usuário</string>
+    <string name="ajuda">Ajuda</string>
+
+    <!-- Variáveis na tela de adicionar itens -->
+    <string name="novoItem">Novo Item</string>
+    <string name="nomeItem">Nome</string>
+    <string name="potencia">Potência (W)</string>
+    <string name="qtd">Qtd</string>
+    <string name="horasuso">Tempo de uso (h)</string>
+    <string name="checkbox">Checkbox</string>
+
+    <string name="nomeImagem">Imagem</string>
+    <string name="dicas">Dicas Econômicas</string>
+    <string name="dica1">1 - Ao sair de um cômodo, desligue o ventilador.</string>
+    <string name="btcancelar">Cancelar</string>
+    <string name="btsalvar">Salvar</string>
+
+    <!-- Opções da tabela da tela principal -->
+    <string name="computador">Computador</string>
+
+
+    <string name="lampadaled">Lâmp. LED</string>
+
+
+    <string name="chuveiro">Chuveiro</string>
+
+
+    <string name="ventilador">Ventilador</string>
+
+
+    <string name="grill">Grill</string>
+
+
+    <string name="gastototal">Gasto Total</string>
 
 </resources>

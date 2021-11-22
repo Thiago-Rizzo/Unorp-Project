@@ -13,8 +13,18 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
+import com.example.unorpproject.model.Result;
+import com.example.unorpproject.retrofit.BaseAsyncTask;
+import com.example.unorpproject.retrofit.RequestRetrofit;
+import com.example.unorpproject.retrofit.SignUpService;
+
+import java.io.IOException;
 import java.util.InputMismatchException;
 import java.util.Objects;
+import java.util.concurrent.atomic.AtomicBoolean;
+
+import retrofit2.Call;
+import retrofit2.Response;
 
 public class CadastroForm extends AppCompatActivity {
 
@@ -30,7 +40,6 @@ public class CadastroForm extends AppCompatActivity {
         setContentView(R.layout.activity_cadastro_form);
         Toolbar toolbar = findViewById(R.id.customtoolbar);
         setSupportActionBar(toolbar);
-
         Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
 
         et_nome = findViewById(R.id.et_nome);
@@ -44,13 +53,39 @@ public class CadastroForm extends AppCompatActivity {
 
         bt_cadastrar.setOnClickListener(view -> {
 
-            if(verificanome(et_nome) && verificacpf(et_cpf) &&
-               verificaemail(et_email) && verificasenha(et_senha)) {
+            if (verificanome(et_nome) && verificacpf(et_cpf) &&
+                    verificaemail(et_email) && verificasenha(et_senha)) {
 
-                geratoast(mensagens[0]);
+                String email = et_email.getText().toString();
+                String password = et_senha.getText().toString();
+                String name = et_nome.getText().toString();
+                String cpf = et_cpf.getText().toString().replace(".", "").replace("-", "");
+
+                signup(email, password, name, cpf);
                 finish();
             }
         });
+    }
+
+    private void signup(String email, String password, String name, String cpf) {
+
+        SignUpService service = new RequestRetrofit().getSignUpService();
+        Call<Result> call = service.signup(email, password, name, cpf);
+        new BaseAsyncTask<>(() -> {
+            try {
+                Response<Result> response = call.execute();
+                return response.body();
+            } catch (IOException e) {
+                e.printStackTrace();
+                return null;
+            }
+        }, response -> {
+            if (response != null) {
+                geratoast(mensagens[0]);
+            } else {
+                geratoast(mensagens[4]);
+            }
+        }).execute();
     }
 
     private void geratoast(String mensagens) {
@@ -59,7 +94,7 @@ public class CadastroForm extends AppCompatActivity {
 
         View layout = inflater.inflate(R.layout.toastf, findViewById(R.id.custom_toast_layout_id));
 
-        TextView toastMessage = layout.findViewById(R.id.textdd);
+        TextView toastMessage = layout.findViewById(R.id.texto);
         toastMessage.setText(mensagens);
 
         Toast toast = new Toast(getApplicationContext());
@@ -87,12 +122,10 @@ public class CadastroForm extends AppCompatActivity {
         if (sequenciacpf.isEmpty()) {
             cpf.setError("Campo vazio!");
             return (false);
-        }
-        else if (!ValidaCPF.isCPF(sequenciacpf)) {
+        } else if (!ValidaCPF.isCPF(sequenciacpf)) {
             geratoast(mensagens[1]);
             return (false);
-        }
-        else if (sequenciacpf.equals("45333868816")) {
+        } else if (sequenciacpf.equals("45333868816")) {
             geratoast(mensagens[2]);
             return (false);
         }
@@ -106,8 +139,7 @@ public class CadastroForm extends AppCompatActivity {
         if (confereemail.isEmpty()) {
             et_email.setError("Campo vazio!");
             return (false);
-        }
-        else if (confereemail.equals("ethan-cruise@hotmail.com")) {
+        } else if (confereemail.equals("ethan-cruise@hotmail.com")) {
             geratoast(mensagens[3]);
             return (false);
         }
@@ -131,10 +163,11 @@ public class CadastroForm extends AppCompatActivity {
             boolean isUpdating;
 
             @Override
-            public void beforeTextChanged (CharSequence s, int start, int count, int after) {}
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+            }
 
             @Override
-            public void onTextChanged (CharSequence s, int start, int before, int after) {
+            public void onTextChanged(CharSequence s, int start, int before, int after) {
 
                 // Quando o texto é alterado o onTextChange é chamado
                 // Essa flag evita a chamada infinita desse método
@@ -161,12 +194,10 @@ public class CadastroForm extends AppCompatActivity {
                     if (str.length() > 9) {
                         str = str.substring(0, 3) + '.' + str.substring(3, 6) + '.'
                                 + str.substring(6, 9) + '-' + str.substring(9);
-                    }
-                    else if (str.length() > 6) {
+                    } else if (str.length() > 6) {
                         str = str.substring(0, 3) + '.' + str.substring(3, 6) + '.'
                                 + str.substring(6);
-                    }
-                    else if (str.length() > 3) {
+                    } else if (str.length() > 3) {
                         str = str.substring(0, 3) + '.' + str.substring(3);
                     }
                     // Seta a flag pra evitar chamada infinita
@@ -175,8 +206,7 @@ public class CadastroForm extends AppCompatActivity {
                     et_cpf.setText(str);
                     // Seta a posição do cursor
                     et_cpf.setSelection(et_cpf.getText().length());
-                }
-                else {
+                } else {
                     isUpdating = true;
                     et_cpf.setText(str);
                     // Se estiver apagando posiciona o cursor
@@ -197,11 +227,11 @@ public class CadastroForm extends AppCompatActivity {
 
             // Considera-se erro CPF's formados por uma sequência de números iguais
             if (CPF.equals("00000000000") || CPF.equals("11111111111")
-                || CPF.equals("22222222222") || CPF.equals("33333333333")
-                || CPF.equals("44444444444") || CPF.equals("55555555555")
-                || CPF.equals("66666666666") || CPF.equals("77777777777")
-                || CPF.equals("88888888888") || CPF.equals("99999999999")
-                || (CPF.length() != 11)) return (false);
+                    || CPF.equals("22222222222") || CPF.equals("33333333333")
+                    || CPF.equals("44444444444") || CPF.equals("55555555555")
+                    || CPF.equals("66666666666") || CPF.equals("77777777777")
+                    || CPF.equals("88888888888") || CPF.equals("99999999999")
+                    || (CPF.length() != 11)) return (false);
 
             char dig10, dig11;
             int sm, i, r, num, peso;
@@ -223,8 +253,7 @@ public class CadastroForm extends AppCompatActivity {
                 r = 11 - (sm % 11);
                 if ((r == 10) || (r == 11)) {
                     dig10 = '0';
-                }
-                else {
+                } else {
                     dig10 = (char) (r + 48); // Converte no respectivo caractere numérico
                 }
 
@@ -240,8 +269,7 @@ public class CadastroForm extends AppCompatActivity {
                 r = 11 - (sm % 11);
                 if ((r == 10) || (r == 11)) {
                     dig11 = '0';
-                }
-                else {
+                } else {
                     dig11 = (char) (r + 48);
                 }
 
@@ -252,5 +280,5 @@ public class CadastroForm extends AppCompatActivity {
             }
         }
     }
-//
+
 }

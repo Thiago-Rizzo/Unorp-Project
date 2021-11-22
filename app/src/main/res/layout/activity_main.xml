@@ -92,9 +92,11 @@
                 <TextView
                     style="@style/tablerowmenor"
                     android:text="@string/diasuteis"/>
-                <TextView android:id="@+id/consumouteis"
+                <TextView
+                    android:id="@+id/consumouteis"
                     style="@style/tablerowmenor"/>
-                <TextView android:id="@+id/custouteis"
+                <TextView
+                    android:id="@+id/custouteis"
                     style="@style/tablerowmenor"/>
             </TableRow>
 
@@ -103,9 +105,11 @@
                     style="@style/tablerowmenor"
                     android:background="@drawable/borda_row_bottomleft"
                     android:text="@string/diasmes"/>
-                <TextView android:id="@+id/consumomes"
+                <TextView
+                    android:id="@+id/consumomes"
                     style="@style/tablerowmenor"/>
-                <TextView android:id="@+id/customes"
+                <TextView
+                    android:id="@+id/customes"
                     style="@style/tablerowmenor"
                     android:background="@drawable/borda_row_bottomright"/>
             </TableRow>

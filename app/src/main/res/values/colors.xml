@@ -24,4 +24,12 @@
     <!-- Cor do ícone do usuário -->
     <color name="ic_user">#4c4c4c</color>
 
+    <!-- Cor do texto dos itens do Spinner -->
+    <color name="my_spinner_text_color">@color/statusbarr</color>
+
+    <!-- Cor de fundo do popup do Spinner -->
+    <color name="background_spinner">#2bb2db</color>
+
+    <color name="checked">#7000ff</color>
+
 </resources>

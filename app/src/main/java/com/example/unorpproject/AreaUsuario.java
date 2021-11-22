@@ -10,7 +10,7 @@ import java.util.Objects;
 
 public class AreaUsuario extends AppCompatActivity {
 
-    Button btu;
+    Button bt_voltar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,9 +20,9 @@ public class AreaUsuario extends AppCompatActivity {
         setSupportActionBar(toolbar);
         Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
 
-        btu = findViewById(R.id.bt_sair);
+        bt_voltar = findViewById(R.id.bt_voltar);
 
-        btu.setOnClickListener(view -> finish());
+        bt_voltar.setOnClickListener(view -> finish());
 
     }
 }

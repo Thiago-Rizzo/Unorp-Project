@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="black">#000000</color>
+
+    <!-- Cor da borda dos campos e botões. -->
+    <color name="white">#FFFFFF</color>
+
+    <!-- Cor das bordas da tabela. -->
+    <color name="cinzinha">#939393</color>
+
+    <!-- Cor da barra de status e barra de ferramentas. -->
+    <color name="statusbarr">#050F38</color>
+
+    <!-- Cor de fundo do botão. -->
+    <color name="fundobotao">#27194e</color>
+
+    <!-- Cor da ação de click do botão. -->
+    <color name="clickbutton">#373737</color>
+
+    <!-- Fundo padrão do ícone do aplicativo. -->
+    <color name="ic_launcher_background">#3DDC84</color>
+
+    <!-- Cor do ícone do usuário -->
+    <color name="ic_user">#4c4c4c</color>
+
+</resources>

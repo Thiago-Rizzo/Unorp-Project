@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Estilo de todos os campos. -->
+    <style name="campos">
+        <item name="android:paddingStart">10dp</item>
+        <item name="android:paddingEnd">15dp</item>
+        <item name="android:background">@drawable/borda_campos</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_marginLeft">15dp</item>
+        <item name="android:layout_marginRight">15dp</item>
+        <item name="fontFamily">sans-serif</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textColorHint">@color/cinzinha</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <!-- Estilo de todos os botões. -->
+    <style name="botoes">
+        <item name="android:background">@drawable/botao</item>
+        <item name="android:layout_height">45dp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_marginLeft">15dp</item>
+        <item name="android:layout_marginRight">15dp</item>
+        <item name="fontFamily">sans-serif</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <!-- Estilo de todos os textos. -->
+    <style name="textos">
+        <item name="android:layout_height">40dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_marginLeft">15dp</item>
+        <item name="android:layout_marginRight">15dp</item>
+        <item name="fontFamily">sans-serif</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">30sp</item>
+    </style>
+
+    <!-- Estilo da primeira linha da tabela. -->
+    <style name="tablerow">
+        <item name="android:background">@drawable/borda_row</item>
+        <item name="fontFamily">sans-serif</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">25sp</item>
+        <item name="android:textAlignment">center</item>
+    </style>
+
+    <!-- Estilo do restante da tabela. -->
+    <style name="tablerowmenor">
+        <item name="android:background">@drawable/borda_row</item>
+        <item name="fontFamily">sans-serif</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">35sp</item>
+        <item name="android:textAlignment">center</item>
+    </style>
+
+</resources>

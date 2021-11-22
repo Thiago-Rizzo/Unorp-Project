@@ -1,0 +1,52 @@
+<resources>
+
+    <!-- Nome do projeto e barra de status. -->
+    <string name="app_name">UNORPproject</string>
+
+    <!-- Tela de Login. -->
+    <string name="logo">Logo</string>
+    <string name="email">E-mail</string>
+    <string name="password">Senha</string>
+    <string name="btentrar">Entrar</string>
+    <string name="btcadastro">Criar uma conta</string>
+    <string name="demo">Demonstração</string>
+
+    <!-- Tela de Demonstração. -->
+    <string name="consume">Consumo em Watts:</string>
+    <!-- Sugestão de Watts. -->
+    <string name="exwatt">Ex: 500</string>
+    <string name="tempouso">Horas de uso diarias:</string>
+    <!-- Sugestão de Horas. -->
+    <string name="extempo">Ex: 5</string>
+    <string name="btcalcular">Calcular</string>
+
+    <!-- Campos da tabela da tela de demonstração. -->
+    <string name="dias">Dias</string>
+    <string name="diasuteis">20</string>
+    <string name="diasmes">30</string>
+    <string name="consumo">Consumo (kWh)</string>
+    <string name="valor">Custo (R$)</string>
+
+    <!-- Tela de Cadastro. -->
+    <string name="cadastro">Cadastro</string>
+    <string name="nome">Nome</string>
+    <string name="cpf">CPF</string>
+    <string name="btcadastrar">Cadastrar</string>
+    <string name="titulo">Voltar</string>
+
+    <!-- Tela de Área do Usuário -->
+    <string name="imageuser">UserImage</string>
+    <string name="sair">Sair</string>
+
+    <string name="notfound">Not found</string>
+    <string name="perfil">Perfil</string>
+    <string name="adicionar">Adicionar</string>
+
+    <string-array name="itens_pre">
+        <item>Lâmpada 9 W</item>
+        <item>Notebook 65 W</item>
+        <item>Chuveiro 4800 W</item>
+        <item>Microondas 1000 W</item>
+    </string-array>
+
+</resources>

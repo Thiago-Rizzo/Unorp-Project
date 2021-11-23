@@ -19,6 +19,10 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
+import com.example.unorpproject.model.Item;
+
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 public class AreaLogged extends AppCompatActivity {
@@ -96,14 +100,11 @@ public class AreaLogged extends AppCompatActivity {
                 // TESTE DE SELEÇÃO DE ITENS NO SPINNER
                 if (position == 1) {
                     geratoast("Lâmpada 9 W selecionada");
-                }
-                else if (position == 2) {
+                } else if (position == 2) {
                     geratoast("Chuveiro 4800 W selecionado");
-                }
-                else if (position == 3) {
+                } else if (position == 3) {
                     geratoast("Microondas 1k W selecionado");
-                }
-                else if (position == 4) {
+                } else if (position == 4) {
                     geratoast("Notebook 65 W selecionado");
                 }
             }
@@ -118,39 +119,54 @@ public class AreaLogged extends AppCompatActivity {
         bt_addItem.setOnClickListener(view -> startActivity(new Intent(AreaLogged.this,
                 AreaAddItem.class)));
 
-        double chompW = Double.parseDouble(chompWatts.getText().toString());
-        double lampW = Double.parseDouble(lampWatts.getText().toString());
-        double chuveW = Double.parseDouble(chuveWatts.getText().toString());
-        double ventiW = Double.parseDouble(ventiWatts.getText().toString());
-        double grillW = Double.parseDouble(grillWatts.getText().toString());
+        List<Item> itens = new ArrayList<>();
+        Item chomp = new Item(
+                chompWatts.getText().toString(),
+                chompHrs.getText().toString(),
+                chompQtd.getText().toString()
+        );
+        itens.add(chomp);
 
-        double chompH = Double.parseDouble(chompHrs.getText().toString());
-        double lampH = Double.parseDouble(lampHrs.getText().toString());
-        double chuveH = Double.parseDouble(chuveHrs.getText().toString());
-        double ventiH = Double.parseDouble(ventiHrs.getText().toString());
-        double grillH = Double.parseDouble(grillHrs.getText().toString());
+        Item lamp = new Item(
+                lampWatts.getText().toString(),
+                lampHrs.getText().toString(),
+                lampQtd.getText().toString()
+        );
+        itens.add(lamp);
 
-        double chompQ = Double.parseDouble(chompQtd.getText().toString());
-        double lampQ = Double.parseDouble(lampQtd.getText().toString());
-        double chuveQ = Double.parseDouble(chuveQtd.getText().toString());
-        double ventiQ = Double.parseDouble(ventiQtd.getText().toString());
-        double grillQ = Double.parseDouble(grillQtd.getText().toString());
+        Item chuve = new Item(
+                chuveWatts.getText().toString(),
+                chuveHrs.getText().toString(),
+                chuveQtd.getText().toString()
+        );
+        itens.add(chuve);
 
-        double gastoChomp = (chompW * chompH * chompQ);
-        double gastoLamp = (lampW * lampH * lampQ);
-        double gastoChuve = (chuveW * chuveH * chuveQ);
-        double gastoVenti = (ventiW * ventiH * ventiQ);
-        double gastoGrill = (grillW * grillH * grillQ);
+        Item venti = new Item(
+                ventiWatts.getText().toString(),
+                ventiHrs.getText().toString(),
+                ventiQtd.getText().toString()
+        );
+        itens.add(venti);
 
-        double totalgasto = (gastoChomp + gastoLamp + gastoChuve + gastoVenti + gastoGrill);
+        Item grill = new Item(
+                grillWatts.getText().toString(),
+                grillHrs.getText().toString(),
+                grillQtd.getText().toString()
+        );
 
-        chompGasto.setText((int) gastoChomp);
-        lampGasto.setText((int) gastoLamp);
-        chuveGasto.setText((int) gastoChuve);
-        ventiGasto.setText((int) gastoVenti);
-        grillGasto.setText((int) gastoGrill);
+        double total = itens.stream().mapToDouble(Item::getGasto).sum();
 
-        gastototal.setText((int) totalgasto);
+        for(Item i : itens){
+            //desenha a linha em tela
+        }
+
+        chompGasto.setText(Double.toString(chomp.getGasto()));
+//        lampGasto.setText((int) gastoLamp);
+//        chuveGasto.setText((int) gastoChuve);
+//        ventiGasto.setText((int) gastoVenti);
+//        grillGasto.setText((int) gastoGrill);
+//
+//        gastototal.setText((int) totalgasto);
 
     }
 

@@ -70,12 +70,4 @@
         <item name="android:textAlignment">center</item>
     </style>
 
-    <style name="mySpinnerItemStyle" parent="@style/Widget.AppCompat.Spinner.DropDown">
-        <item name="android:textColor">@color/my_spinner_text_color</item>
-    </style>
-
-    <style name="checkBox" parent="Widget.AppCompat.CompoundButton.CheckBox">
-        <item name="colorAccent">#7000FF</item>
-    </style>
-
 </resources>

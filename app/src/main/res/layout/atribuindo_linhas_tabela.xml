@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableRow xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/name"
+        style="@style/tablerow"
+        android:background="@drawable/borda_row_bottomleft"/>
+
+    <TextView
+        android:id="@+id/wattsItem"
+        style="@style/tablerow" />
+
+    <TextView
+        android:id="@+id/hrsItem"
+        style="@style/tablerow"/>
+
+    <TextView
+        android:id="@+id/qtdItem"
+        style="@style/tablerow"/>
+
+    <TextView
+        android:id="@+id/gastoItem"
+        style="@style/tablerow"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/remove"
+        style="@style/tablerow"
+        android:layout_width="15dp"
+        android:layout_height="20dp"
+        android:background="@drawable/botao_remover"
+        android:gravity="clip_vertical|bottom"
+        android:text="@string/remover"
+        android:textSize="16sp"
+        android:textColor="@color/bt_removerItem" />
+
+</TableRow>

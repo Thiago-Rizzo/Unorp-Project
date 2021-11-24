@@ -3,6 +3,25 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/The_Doctor/Documents/UNORP-Project/app/src/main/res/drawable/backitens.xml" value="0.14290540540540542" />
+        <entry key="..\:/Users/The_Doctor/Documents/UNORP-Project/app/src/main/res/drawable/backuser.xml" value="0.14290540540540542" />
+        <entry key="..\:/Users/The_Doctor/Documents/UNORP-Project/app/src/main/res/drawable/borda_campos.xml" value="0.14290540540540542" />
+        <entry key="..\:/Users/The_Doctor/Documents/UNORP-Project/app/src/main/res/drawable/borda_row.xml" value="0.14290540540540542" />
+        <entry key="..\:/Users/The_Doctor/Documents/UNORP-Project/app/src/main/res/drawable/borda_row_bottomleft.xml" value="0.2203125" />
+        <entry key="..\:/Users/The_Doctor/Documents/UNORP-Project/app/src/main/res/drawable/borda_row_bottomright.xml" value="0.2203125" />
+        <entry key="..\:/Users/The_Doctor/Documents/UNORP-Project/app/src/main/res/drawable/borda_row_botton_and_top_left.xml" value="0.2203125" />
+        <entry key="..\:/Users/The_Doctor/Documents/UNORP-Project/app/src/main/res/drawable/borda_row_botton_and_top_right.xml" value="0.2203125" />
+        <entry key="..\:/Users/The_Doctor/Documents/UNORP-Project/app/src/main/res/drawable/borda_row_fixa.xml" value="0.14290540540540542" />
+        <entry key="..\:/Users/The_Doctor/Documents/UNORP-Project/app/src/main/res/drawable/borda_row_fixa_left.xml" value="0.14290540540540542" />
+        <entry key="..\:/Users/The_Doctor/Documents/UNORP-Project/app/src/main/res/drawable/borda_row_fixa_right.xml" value="0.14290540540540542" />
+        <entry key="..\:/Users/The_Doctor/Documents/UNORP-Project/app/src/main/res/drawable/borda_row_topleft.xml" value="0.14290540540540542" />
+        <entry key="..\:/Users/The_Doctor/Documents/UNORP-Project/app/src/main/res/drawable/borda_row_topright.xml" value="0.14290540540540542" />
+        <entry key="..\:/Users/The_Doctor/Documents/UNORP-Project/app/src/main/res/drawable/borda_table.xml" value="0.14290540540540542" />
+        <entry key="..\:/Users/The_Doctor/Documents/UNORP-Project/app/src/main/res/drawable/botao_normal.xml" value="0.14290540540540542" />
+        <entry key="..\:/Users/The_Doctor/Documents/UNORP-Project/app/src/main/res/drawable/botao_remover.xml" value="0.14290540540540542" />
+        <entry key="..\:/Users/The_Doctor/Documents/UNORP-Project/app/src/main/res/layout/activity_add_item.xml" value="0.25" />
+        <entry key="..\:/Users/The_Doctor/Documents/UNORP-Project/app/src/main/res/layout/activity_area_logged.xml" value="0.25" />
+        <entry key="..\:/Users/The_Doctor/Documents/UNORP-Project/app/src/main/res/layout/atribuindo_linhas_tabela.xml" value="0.67" />
         <entry key="..\:/Users/Usuario/Documents/GitHub/Unorp-Project/app/src/main/res/layout/activity_add_item.xml" value="0.20520833333333333" />
         <entry key="..\:/Users/Usuario/Documents/GitHub/Unorp-Project/app/src/main/res/layout/activity_area_logged.xml" value="0.20520833333333333" />
       </map>

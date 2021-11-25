@@ -13,140 +13,82 @@
         android:background="@drawable/imges"
         tools:context=".AreaLogged">
 
-        <include layout="@layout/custom_toolbar" />
-
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/additens"
-            style="@style/botoes"
-            android:layout_marginTop="65dp"
-            android:text="@string/notfound"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <RelativeLayout
-            android:id="@+id/relative"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_marginLeft="15dp"
-            android:layout_marginTop="40dp"
-            android:layout_marginRight="15dp"
-            android:orientation="vertical"
-            app:layout_constraintTop_toBottomOf="@id/additens"
-            tools:layout_editor_absoluteX="15dp">
-
-            <Spinner
-                android:id="@+id/spinner"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:popupBackground="@color/background_spinner"
-                android:spinnerMode="dropdown"/>
-
-        </RelativeLayout>
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/custom_toolbar" />
 
         <ImageButton
             android:id="@+id/bt_addItem"
             android:layout_width="50dp"
             android:layout_height="50dp"
-            android:layout_marginStart="40dp"
-            android:layout_marginTop="75dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
             android:backgroundTint="@android:color/transparent"
             android:contentDescription="@string/adicionarItem"
             android:src="@drawable/ic_baseline_add_circle_outline_24"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/relative" />
+            app:layout_constraintTop_toBottomOf="@id/toolbar" />
 
         <TextView
             android:id="@+id/adicionarItem"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="7dp"
-            android:layout_marginStart="10dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="19dp"
             android:text="@string/adicionarItem"
-            android:textSize="25sp"
-            android:textColor="@color/white"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/bt_addItem"/>
-
-        <ImageButton
-            android:id="@+id/bt_removeItem"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_marginEnd="40dp"
-            android:layout_marginTop="75dp"
-            android:backgroundTint="@android:color/transparent"
-            android:contentDescription="@string/removerItem"
-            android:src="@drawable/ic_baseline_remove_circle_outline_24"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/relative" />
-
-        <TextView
-            android:id="@+id/removerItem"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:layout_marginStart="10dp"
-            android:layout_marginEnd="12dp"
-            android:text="@string/removerItem"
             android:textColor="@color/white"
             android:textSize="25sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/bt_removeItem" />
+            app:layout_constraintStart_toEndOf="@id/bt_addItem"
+            app:layout_constraintTop_toBottomOf="@id/toolbar" />
 
         <TableLayout
+            android:id="@+id/table"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
             android:layout_marginStart="10dp"
+            android:layout_marginTop="30dp"
             android:layout_marginEnd="10dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/adicionarItem"
+            android:background="@drawable/borda_table"
             android:stretchColumns="*"
-            android:background="@drawable/borda_table">
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/adicionarItem">
 
-            <TableRow
-                android:layout_height="wrap_content">
+            <TableRow android:layout_height="match_parent">
+
                 <TextView
                     style="@style/tablerow"
                     android:background="@drawable/borda_row_topleft"
-                    android:text="@string/itens"/>
+                    android:text="@string/itens" />
 
                 <TextView
                     android:id="@+id/watts"
                     style="@style/tablerow"
-                    android:text="@string/watts"/>
+                    android:text="@string/watts" />
 
                 <TextView
                     android:id="@+id/hrs"
                     style="@style/tablerow"
-                    android:text="@string/hrs"/>
+                    android:text="@string/hrs" />
 
                 <TextView
                     android:id="@+id/qtd"
                     style="@style/tablerow"
-                    android:text="@string/qtdItem"/>
+                    android:text="@string/qtdItem" />
 
                 <TextView
                     android:id="@+id/gasto"
                     style="@style/tablerow"
-                    android:text="@string/gasto"/>
-
-                <ImageView
-                    android:layout_height="match_parent"
-                    android:layout_width="match_parent"
-                    android:layout_marginTop="1dp"
                     android:background="@drawable/borda_row_topright"
-                    android:contentDescription="@string/checkbox"
-                    android:src="@drawable/ic_baseline_check_box_24"/>
+                    android:text="@string/gasto" />
 
             </TableRow>
 
-            <TableRow
-                android:layout_height="match_parent">
+            <TableRow android:layout_height="match_parent">
+
                 <TextView
                     style="@style/tablerow"
-                    android:text="@string/computador"/>
+                    android:text="@string/computador" />
 
                 <TextView
                     android:id="@+id/chompWatts"
@@ -165,30 +107,23 @@
                 <EditText
                     android:id="@+id/chompQtd"
                     style="@style/tablerow"
+                    android:importantForAutofill="no"
+                    android:inputType="numberSigned"
                     android:text="1"
                     android:textColor="@color/white"
-                    android:inputType="numberSigned"
-                    android:importantForAutofill="no"
                     tools:ignore="LabelFor" />
 
                 <TextView
                     android:id="@+id/chompGasto"
-                    style="@style/tablerow"/>
-
-                <CheckBox
-                    android:id="@+id/ckChomp"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="center"
-                    android:button="@drawable/ic_baseline_check_box_outline_blank_24" />
+                    style="@style/tablerow" />
 
             </TableRow>
 
-            <TableRow
-                android:layout_height="match_parent">
+            <TableRow android:layout_height="match_parent">
+
                 <TextView
                     style="@style/tablerow"
-                    android:text="@string/lampadaled"/>
+                    android:text="@string/lampadaled" />
 
                 <TextView
                     android:id="@+id/lampWatts"
@@ -198,39 +133,32 @@
                 <EditText
                     android:id="@+id/lampHrs"
                     style="@style/tablerow"
+                    android:importantForAutofill="no"
+                    android:inputType="numberSigned"
                     android:text="1"
                     android:textColor="@color/white"
-                    android:inputType="numberSigned"
-                    android:importantForAutofill="no"
                     tools:ignore="LabelFor" />
 
                 <EditText
                     android:id="@+id/lampQtd"
                     style="@style/tablerow"
+                    android:importantForAutofill="no"
+                    android:inputType="numberSigned"
                     android:text="1"
                     android:textColor="@color/white"
-                    android:inputType="numberSigned"
-                    android:importantForAutofill="no"
                     tools:ignore="LabelFor" />
 
                 <TextView
                     android:id="@+id/lampGasto"
-                    style="@style/tablerow"/>
-
-                <CheckBox
-                    android:id="@+id/ckLamp"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="center"
-                    android:button="@drawable/ic_baseline_check_box_outline_blank_24"/>
+                    style="@style/tablerow" />
 
             </TableRow>
 
-            <TableRow
-                android:layout_height="match_parent">
+            <TableRow android:layout_height="match_parent">
+
                 <TextView
                     style="@style/tablerow"
-                    android:text="@string/chuveiro"/>
+                    android:text="@string/chuveiro" />
 
                 <TextView
                     android:id="@+id/chuveWatts"
@@ -240,39 +168,32 @@
                 <EditText
                     android:id="@+id/chuveHrs"
                     style="@style/tablerow"
+                    android:importantForAutofill="no"
+                    android:inputType="numberSigned"
                     android:text="1"
                     android:textColor="@color/white"
-                    android:inputType="numberSigned"
-                    android:importantForAutofill="no"
                     tools:ignore="LabelFor" />
 
                 <EditText
                     android:id="@+id/chuveQtd"
                     style="@style/tablerow"
+                    android:importantForAutofill="no"
+                    android:inputType="numberSigned"
                     android:text="1"
                     android:textColor="@color/white"
-                    android:inputType="numberSigned"
-                    android:importantForAutofill="no"
                     tools:ignore="LabelFor" />
 
                 <TextView
                     android:id="@+id/chuveGasto"
-                    style="@style/tablerow"/>
-
-                <CheckBox
-                    android:id="@+id/ckChuve"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="center"
-                    android:button="@drawable/ic_baseline_check_box_outline_blank_24" />
+                    style="@style/tablerow" />
 
             </TableRow>
 
-            <TableRow
-                android:layout_height="match_parent">
+            <TableRow android:layout_height="match_parent">
+
                 <TextView
                     style="@style/tablerow"
-                    android:text="@string/ventilador"/>
+                    android:text="@string/ventilador" />
 
                 <TextView
                     android:id="@+id/ventiWatts"
@@ -282,39 +203,33 @@
                 <EditText
                     android:id="@+id/ventiHrs"
                     style="@style/tablerow"
+                    android:importantForAutofill="no"
+                    android:inputType="numberSigned"
                     android:text="1"
                     android:textColor="@color/white"
-                    android:inputType="numberSigned"
-                    android:importantForAutofill="no"
                     tools:ignore="LabelFor" />
 
                 <EditText
                     android:id="@+id/ventiQtd"
                     style="@style/tablerow"
+                    android:importantForAutofill="no"
+                    android:inputType="numberSigned"
                     android:text="1"
                     android:textColor="@color/white"
-                    android:inputType="numberSigned"
-                    android:importantForAutofill="no"
                     tools:ignore="LabelFor" />
 
                 <TextView
                     android:id="@+id/ventiGasto"
-                    style="@style/tablerow"/>
-
-                <CheckBox
-                    android:id="@+id/ckVenti"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="center"
-                    android:button="@drawable/ic_baseline_check_box_outline_blank_24" />
+                    style="@style/tablerow" />
 
             </TableRow>
 
-            <TableRow
-                android:layout_height="match_parent">
+            <TableRow android:layout_height="match_parent">
+
                 <TextView
                     style="@style/tablerow"
-                    android:text="@string/grill"/>
+                    android:background="@drawable/borda_row_bottomleft"
+                    android:text="@string/grill" />
 
                 <TextView
                     android:id="@+id/grillWatts"
@@ -324,47 +239,54 @@
                 <EditText
                     android:id="@+id/grillHrs"
                     style="@style/tablerow"
+                    android:importantForAutofill="no"
+                    android:inputType="numberSigned"
                     android:text="1"
                     android:textColor="@color/white"
-                    android:inputType="numberSigned"
-                    android:importantForAutofill="no"
                     tools:ignore="LabelFor" />
 
                 <EditText
                     android:id="@+id/grillQtd"
                     style="@style/tablerow"
+                    android:importantForAutofill="no"
+                    android:inputType="numberSigned"
                     android:text="1"
                     android:textColor="@color/white"
-                    android:inputType="numberSigned"
-                    android:importantForAutofill="no"
                     tools:ignore="LabelFor" />
 
                 <TextView
                     android:id="@+id/grillGasto"
-                    style="@style/tablerow"/>
-
-                <CheckBox
-                    android:id="@+id/ckGrill"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="center"
-                    android:button="@drawable/ic_baseline_check_box_outline_blank_24" />
+                    style="@style/tablerow" />
 
             </TableRow>
+        </TableLayout>
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:stretchColumns="*"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/table">
 
             <TableRow
-                android:layout_height="wrap_content">
+                android:layout_height="match_parent"
+                tools:ignore="UselessParent">
 
                 <TextView
+                    android:id="@+id/gastototalfixo"
                     style="@style/tablerow"
-                    android:text="@string/gastototal"/>
+                    android:text="@string/gastototal"
+                    android:layout_marginStart="10dp"
+                    android:background="@drawable/borda_row_fixa_left" />
 
                 <TextView
                     android:id="@+id/gastototal"
-                    style="@style/tablerow"/>
-
+                    style="@style/tablerow"
+                    android:layout_marginEnd="10dp"
+                    android:background="@drawable/borda_row_fixa_right" />
             </TableRow>
-
         </TableLayout>
 
         <View

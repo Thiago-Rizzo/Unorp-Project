@@ -13,9 +13,11 @@
 
     <!-- Tela de Demonstração. -->
     <string name="consume">Consumo em Watts:</string>
+
     <!-- Sugestão de Watts. -->
     <string name="exwatt">Ex: 500</string>
-    <string name="tempouso">Horas de uso diarias:</string>
+    <string name="tempouso">Horas de uso diárias:</string>
+
     <!-- Sugestão de Horas. -->
     <string name="extempo">Ex: 5</string>
     <string name="btcalcular">Calcular</string>
@@ -40,13 +42,13 @@
     <string name="btvoltar">Voltar</string>
 
     <!-- Tela Principal do Usuário -->
-    <string name="adicionarItem">Adicionar</string>
-    <string name="removerItem">Remover</string>
+    <string name="adicionarItem">Adicionar um novo item</string>
+    <string name="remover">X</string>
     <string name="itens">Itens</string>
     <string name="watts">Watts</string>
     <string name="hrs">Hrs</string>
     <string name="qtdItem">Qtd</string>
-    <string name="gasto">Gasto</string>
+    <string name="gasto">Gasto W</string>
 
     <!-- Opções barra de ferramentas -->
     <string name="perfilUsuario">Perfil do Usuário</string>
@@ -54,34 +56,23 @@
 
     <!-- Variáveis na tela de adicionar itens -->
     <string name="novoItem">Novo Item</string>
-    <string name="nomeItem">Nome</string>
+    <string name="nomeItem">Dispositivo</string>
     <string name="potencia">Potência (W)</string>
-    <string name="qtd">Qtd</string>
+    <string name="qtd">Quantidade</string>
     <string name="horasuso">Tempo de uso (h)</string>
     <string name="checkbox">Checkbox</string>
 
-    <string name="nomeImagem">Imagem</string>
-    <string name="dicas">Dicas Econômicas</string>
+    <string name="dicas">Dicas para Economizar:</string>
     <string name="dica1">1 - Ao sair de um cômodo, desligue o ventilador.</string>
     <string name="btcancelar">Cancelar</string>
     <string name="btsalvar">Salvar</string>
 
     <!-- Opções da tabela da tela principal -->
     <string name="computador">Computador</string>
-
-
     <string name="lampadaled">Lâmp. LED</string>
-
-
     <string name="chuveiro">Chuveiro</string>
-
-
     <string name="ventilador">Ventilador</string>
-
-
     <string name="grill">Grill</string>
-
-
-    <string name="gastototal">Gasto Total</string>
+    <string name="gastototal">Gasto Total em kW/h</string>
 
 </resources>

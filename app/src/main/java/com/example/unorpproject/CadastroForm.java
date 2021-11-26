@@ -14,6 +14,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 import com.example.unorpproject.model.Result;
+import com.example.unorpproject.model.User;
 import com.example.unorpproject.retrofit.BaseAsyncTask;
 import com.example.unorpproject.retrofit.RequestRetrofit;
 import com.example.unorpproject.retrofit.SignUpService;
@@ -70,10 +71,10 @@ public class CadastroForm extends AppCompatActivity {
     private void signup(String email, String password, String name, String cpf) {
 
         SignUpService service = new RequestRetrofit().getSignUpService();
-        Call<Result> call = service.signup(email, password, name, cpf);
+        Call<Result<User>> call = service.signup(email, password, name, cpf);
         new BaseAsyncTask<>(() -> {
             try {
-                Response<Result> response = call.execute();
+                Response<Result<User>> response = call.execute();
                 return response.body();
             } catch (IOException e) {
                 e.printStackTrace();
@@ -81,7 +82,10 @@ public class CadastroForm extends AppCompatActivity {
             }
         }, response -> {
             if (response != null) {
-                geratoast(mensagens[0]);
+                if (response.getResponse() != null) {
+                    geratoast(mensagens[0]);
+                }
+                geratoast(response.getMessage());
             } else {
                 geratoast(mensagens[4]);
             }
@@ -125,9 +129,6 @@ public class CadastroForm extends AppCompatActivity {
         } else if (!ValidaCPF.isCPF(sequenciacpf)) {
             geratoast(mensagens[1]);
             return (false);
-        } else if (sequenciacpf.equals("45333868816")) {
-            geratoast(mensagens[2]);
-            return (false);
         }
         return (true);
     }
@@ -138,9 +139,6 @@ public class CadastroForm extends AppCompatActivity {
 
         if (confereemail.isEmpty()) {
             et_email.setError("Campo vazio!");
-            return (false);
-        } else if (confereemail.equals("ethan-cruise@hotmail.com")) {
-            geratoast(mensagens[3]);
             return (false);
         }
         return (true);

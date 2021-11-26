@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\Usuario\\Documents\\GitHub\\Unorp-Project\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-night-v8\\values-night-v8.xml",
+            "outputFile": "D:\\Leo\\Faculdade\\Unorp\\Projeto Semestral\\UNORP-Project\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-night-v8\\values-night-v8.xml",
             "map": [
                 {
                     "source": "C:\\Users\\Usuario\\.gradle\\caches\\transforms-3\\43711b72eaf2f529e5b9b1576380fb27\\transformed\\appcompat-1.3.1\\res\\values-night-v8\\values-night-v8.xml",
@@ -21,14 +21,14 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\Usuario\\Documents\\GitHub\\Unorp-Project\\app\\src\\main\\res\\values-night\\themes.xml",
+                    "source": "D:\\Leo\\Faculdade\\Unorp\\Projeto Semestral\\UNORP-Project\\app\\src\\main\\res\\values-night\\themes.xml",
                     "from": {
                         "startLines": "3",
                         "startColumns": "4",
-                        "startOffsets": "104",
+                        "startOffsets": "101",
                         "endLines": "17",
                         "endColumns": "12",
-                        "endOffsets": "729"
+                        "endOffsets": "712"
                     },
                     "to": {
                         "startLines": "25",

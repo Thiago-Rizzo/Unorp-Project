@@ -12,7 +12,7 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.unorpproject.model.Result;
-import com.example.unorpproject.model.Variables;
+import com.example.unorpproject.model.User;
 import com.example.unorpproject.retrofit.BaseAsyncTask;
 import com.example.unorpproject.retrofit.RequestRetrofit;
 import com.example.unorpproject.retrofit.SignUpService;
@@ -27,6 +27,8 @@ public class LoginForm extends AppCompatActivity {
     Button bt_entrar, bt_criarConta, bt_outraTela;
     EditText et_email, et_senha;
     String[] mensagens = {"E-mail ou senha incorretos!", "Usuário não encontrado."};
+
+    public static User user;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,10 +57,10 @@ public class LoginForm extends AppCompatActivity {
     private void login(String email, String password) {
 
         SignUpService service = new RequestRetrofit().getSignUpService();
-        Call<Result> call = service.login(email, password);
+        Call<Result<User>> call = service.login(email, password);
         new BaseAsyncTask<>(() -> {
             try {
-                Response<Result> response = call.execute();
+                Response<Result<User>> response = call.execute();
                 return response.body();
             } catch (IOException e) {
                 e.printStackTrace();
@@ -66,9 +68,13 @@ public class LoginForm extends AppCompatActivity {
             }
         }, response -> {
             if (response != null) {
-                Variables.setUser(response.getResponse());
-                startActivity(new Intent(LoginForm.this,
-                        AreaLogged.class));
+                user = response.getResponse();
+                if (user != null) {
+                    startActivity(new Intent(LoginForm.this,
+                            AreaLogged.class));
+                } else {
+                    geratoast(response.getMessage());
+                }
             } else {
                 geratoast(mensagens[0]);
             }

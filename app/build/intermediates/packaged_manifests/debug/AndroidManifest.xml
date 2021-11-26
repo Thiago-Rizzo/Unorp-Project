@@ -28,7 +28,7 @@
             android:exported="true"
             android:parentActivityName="com.example.unorpproject.AreaLogged" />
         <activity
-            android:name="com.example.unorpproject.LoginForm"
+            android:name="com.example.unorpproject.AreaLogged"
             android:exported="true"
             android:parentActivityName="com.example.unorpproject.LoginForm" />
         <activity
@@ -44,9 +44,8 @@
             android:exported="true"
             android:parentActivityName="com.example.unorpproject.LoginForm" />
         <activity
-            android:name="com.example.unorpproject.AreaLogged"
-            android:exported="true"
-            android:launchMode="singleTop" >
+            android:name="com.example.unorpproject.LoginForm"
+            android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

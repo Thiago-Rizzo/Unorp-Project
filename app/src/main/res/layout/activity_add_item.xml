@@ -11,13 +11,15 @@
         android:layout_height="match_parent"
         android:background="@drawable/imges">
 
+        <include layout="@layout/add_item_toolbar" />
+
         <TextView
-            android:id="@+id/itemnovo"
+            android:id="@+id/titulo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="65dp"
-            android:gravity="center"
             android:text="@string/novoItem"
+            android:textAlignment="center"
             android:textColor="@color/white"
             android:textSize="30sp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -26,155 +28,121 @@
 
         <EditText
             android:id="@+id/nomedoItem"
-            android:layout_width="200dp"
+            android:layout_width="190dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="30dp"
             android:hint="@string/nomeItem"
             android:importantForAutofill="no"
             android:inputType="text"
-            android:textColor="@color/white"
-            android:textColorHint="@color/white"
-            android:textSize="20sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/itemnovo"
-            tools:ignore="LabelFor" />
-
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/menos"
-            android:layout_width="50dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="15dp"
-            android:background="@drawable/ic_minus"
-            app:layout_constraintBottom_toBottomOf="@+id/nomedoItem"
-            app:layout_constraintStart_toEndOf="@+id/nomedoItem" />
-
-        <EditText
-            android:id="@+id/quantidade"
-            android:layout_width="50dp"
-            android:layout_height="48dp"
-            android:layout_marginStart="7dp"
-            android:hint="@string/qtd"
-            android:importantForAutofill="no"
-            android:inputType="numberSigned"
-            android:textColor="@color/white"
-            android:textColorHint="@color/white"
-            android:textSize="20sp"
-            app:layout_constraintBottom_toBottomOf="@+id/menos"
-            app:layout_constraintStart_toEndOf="@+id/menos"
-            tools:ignore="LabelFor" />
-
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/mais"
-            android:layout_width="50dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="7dp"
-            android:layout_marginEnd="10dp"
-            android:background="@drawable/ic_more"
-            app:layout_constraintBottom_toBottomOf="@+id/quantidade"
-            app:layout_constraintStart_toEndOf="@+id/quantidade" />
-
-        <EditText
-            android:id="@+id/potencia"
-            android:layout_width="150dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="20dp"
-            android:hint="@string/potencia"
-            android:importantForAutofill="no"
-            android:inputType="numberSigned"
             android:textAlignment="center"
             android:textColor="@color/white"
             android:textColorHint="@color/white"
             android:textSize="20sp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/nomedoItem"
+            app:layout_constraintTop_toBottomOf="@id/titulo"
+            tools:ignore="LabelFor" />
+
+        <EditText
+            android:id="@+id/potencia"
+            android:layout_width="190dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="10dp"
+            android:hint="@string/potencia"
+            android:importantForAutofill="no"
+            android:inputType="number"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="@id/nomedoItem"
+            app:layout_constraintStart_toEndOf="@id/nomedoItem"
             tools:ignore="LabelFor" />
 
         <EditText
             android:id="@+id/horas"
-            android:layout_width="wrap_content"
+            android:layout_width="190dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="20dp"
             android:hint="@string/horasuso"
             android:importantForAutofill="no"
-            android:inputType="numberSigned"
+            android:inputType="number"
             android:textAlignment="center"
             android:textColor="@color/white"
             android:textColorHint="@color/white"
             android:textSize="20sp"
-            app:layout_constraintBottom_toBottomOf="@+id/potencia"
-            app:layout_constraintStart_toEndOf="@+id/potencia"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/nomedoItem"
             tools:ignore="LabelFor" />
 
-        <View
-            android:id="@+id/containerItens"
-            android:layout_width="200dp"
-            android:layout_height="150dp"
-            android:layout_marginTop="30dp"
-            android:background="@drawable/backitens"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/horas" />
-
-        <ImageView
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:src="@drawable/ic_item_image"
-            app:layout_constraintTop_toTopOf="@id/containerItens"
-            app:layout_constraintStart_toStartOf="@id/containerItens"
-            app:layout_constraintEnd_toEndOf="@id/containerItens"
-            app:layout_constraintBottom_toBottomOf="@id/containerItens"
-            android:contentDescription="@string/nomeImagem"/>
+        <EditText
+            android:id="@+id/quantidade"
+            android:layout_width="190dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="10dp"
+            android:hint="@string/qtd"
+            android:importantForAutofill="no"
+            android:inputType="number"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:textSize="20sp"
+            app:layout_constraintStart_toEndOf="@+id/horas"
+            app:layout_constraintTop_toBottomOf="@+id/potencia"
+            tools:ignore="LabelFor" />
 
         <TextView
             android:id="@+id/titulodicas"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
             android:layout_marginStart="10dp"
+            android:layout_marginTop="30dp"
             android:text="@string/dicas"
-            android:textSize="25sp"
             android:textColor="@color/white"
-            app:layout_constraintTop_toBottomOf="@id/containerItens"
-            app:layout_constraintStart_toStartOf="parent"/>
+            android:textSize="25sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/horas" />
 
         <TextView
             android:id="@+id/dica1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
             android:layout_marginStart="10dp"
+            android:layout_marginTop="20dp"
             android:layout_marginEnd="10dp"
-            android:text="@string/dica1"
-            android:textSize="25sp"
             android:textColor="@color/white"
-            app:layout_constraintTop_toBottomOf="@id/titulodicas"
+            android:textSize="25sp"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"/>
+            app:layout_constraintTop_toBottomOf="@id/titulodicas" />
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/bt_cancelar"
+            style="@style/botoes"
             android:layout_width="150dp"
             android:layout_marginTop="150dp"
             android:text="@string/btcancelar"
-            style="@style/botoes"
-            app:layout_constraintTop_toBottomOf="@id/dica1"
-            app:layout_constraintStart_toStartOf="parent"/>
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/dica1" />
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/bt_salvar"
-            android:layout_width="150dp"
-            android:layout_marginTop="150dp"
-            android:layout_marginStart="80dp"
-            android:text="@string/btsalvar"
             style="@style/botoes"
-            app:layout_constraintTop_toBottomOf="@id/dica1"
-            app:layout_constraintStart_toEndOf="@id/bt_cancelar"/>
+            android:layout_width="150dp"
+            android:layout_marginStart="80dp"
+            android:layout_marginTop="150dp"
+            android:text="@string/btsalvar"
+            app:layout_constraintStart_toEndOf="@id/bt_cancelar"
+            app:layout_constraintTop_toBottomOf="@id/dica1" />
 
         <View
-            android:layout_width="wrap_content"
-            android:layout_height="800dp"
+            android:layout_width="match_parent"
+            android:layout_height="600dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />

@@ -20,7 +20,7 @@
             android:exported="true"
             android:parentActivityName=".AreaLogged" />
         <activity
-            android:name=".LoginForm"
+            android:name=".AreaLogged"
             android:exported="true"
             android:parentActivityName=".LoginForm" />
         <activity
@@ -36,9 +36,8 @@
             android:exported="true"
             android:parentActivityName=".LoginForm" />
         <activity
-            android:name=".AreaLogged"
-            android:exported="true"
-            android:launchMode="singleTop">
+            android:name=".LoginForm"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

@@ -11,7 +11,7 @@
         android:background="@drawable/imges"
         tools:context=".AreaUsuario">
 
-        <include layout="@layout/custom_toolbar"/>
+        <include layout="@layout/add_item_toolbar" />
 
         <View
             android:id="@+id/containerUser"

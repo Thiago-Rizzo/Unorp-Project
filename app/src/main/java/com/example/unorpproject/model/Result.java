@@ -2,12 +2,12 @@ package com.example.unorpproject.model;
 
 import java.util.Date;
 
-public class Result {
+public class Result<T> {
     private String message;
-    private User response;
+    private T response;
     private Date timeStamp;
 
-    public Result(String message, User response, Date timeStamp) {
+    public Result(String message, T response, Date timeStamp) {
         this.message = message;
         this.response = response;
         this.timeStamp = timeStamp;
@@ -21,11 +21,11 @@ public class Result {
         this.message = message;
     }
 
-    public User getResponse() {
+    public T getResponse() {
         return response;
     }
 
-    public void setResponse(User response) {
+    public void setResponse(T response) {
         this.response = response;
     }
 
